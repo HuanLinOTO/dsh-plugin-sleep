@@ -1,0 +1,10 @@
+# dsh-sleep bundle layer: inserts the dsh-sleep plugin row.
+# Loaded by `dsh plugin --profile <name> add @dsh-external/dsh-sleep`.
+# The `name` is the package entry; Loader resolves it from profile node_modules.
+# Defaults: max 60s per sleep, 0s default sleep (model must specify duration_ms).
+- insert:
+    - id: dsh-sleep
+      name: '@dsh-external/dsh-sleep'
+      config:
+        maxDurationMs: 60000
+        defaultDurationMs: 0

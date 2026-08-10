@@ -1,0 +1,9 @@
+node_modules/
+*.tsbuildinfo
+*.tgz
+coverage/
+.vitest-cache/
+# Local dev-only pnpm files: profile provides its own on github: install.
+# Committing these without active maintenance breaks github: install resolution.
+pnpm-lock.yaml
+pnpm-workspace.yaml
