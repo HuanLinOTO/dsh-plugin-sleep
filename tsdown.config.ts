@@ -1,9 +1,9 @@
 import { defineConfig, type UserConfig } from 'tsdown'
 
-const ID = '@dsh-external/dsh-sleep'
+const ID = '@huanlin/dsh-plugin-sleep'
 
 const HOST_EXTERNALS = [
-  'cordis',
+  '@deepseek-ai/cordis',
   '@deepseek-ai/dsh-tools',
 ]
 

@@ -12,7 +12,7 @@
  *     rather than throwing — cancellation is a business non-ideal state,
  *     not infrastructure failure (per plugin-development-guide.md §3 C5).
  *
- * @module @dsh-external/dsh-sleep
+ * @module @huanlin/dsh-plugin-sleep
  */
 
 import z from 'schemastery'

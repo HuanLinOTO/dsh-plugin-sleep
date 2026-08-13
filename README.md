@@ -6,7 +6,7 @@ DSH 插件：向模型暴露一个 `sleep` 工具，让模型按指定毫秒数�
 
 ```sh
 # 从 git 安装（推荐）：
-dsh plugin --profile <profile> add github:dsh-external/dsh-sleep
+dsh plugin --profile <profile> add github:huanlinoto/dsh-plugin-sleep
 
 # 从本地 checkout 开发安装：
 dsh plugin --profile <profile> add link:D:\Projects\deepseek-harness\dsh-sleep
