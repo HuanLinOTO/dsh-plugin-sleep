@@ -1,3 +1,5 @@
+本项目已被dshfind.com收录
+
 # dsh-sleep
 
 DSH 插件：向模型暴露一个 `sleep` 工具，让模型按指定毫秒数暂停执行后再返回。适合等待时间相关条件成立（服务重启、debounce 窗口、retry backoff）且没有事件型工具可用的场景。
