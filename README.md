@@ -2,19 +2,21 @@
 
 # dsh-sleep
 
+[![npm version](https://img.shields.io/npm/v/@huanlin/dsh-plugin-sleep)](https://www.npmjs.com/package/@huanlin/dsh-plugin-sleep)
+
 DSH 插件：向模型暴露一个 `sleep` 工具，让模型按指定毫秒数暂停执行后再返回。适合等待时间相关条件成立（服务重启、debounce 窗口、retry backoff）且没有事件型工具可用的场景。
 
 ## 安装
 
 ```sh
-# 从 git 安装（推荐）：
-dsh plugin --profile <profile> add github:huanlinoto/dsh-plugin-sleep
+# 从 npm 安装（推荐）：
+dsh plugin --profile web add @huanlin/dsh-plugin-sleep
 
 # 从本地 checkout 开发安装：
-dsh plugin --profile <profile> add link:D:\Projects\deepseek-harness\dsh-sleep
+dsh plugin --profile web add link:D:\Projects\deepseek-harness\dsh-sleep
 ```
 
-预构建策略：`lib/` 入库，无 `prepare` 脚本，`github:` 安装开箱即用，无需 `allowBuilds`。
+预构建策略：`lib/` 入库，无 `prepare` 脚本，npm 安装开箱即用，无需 `allowBuilds`。
 
 ## 配置
 
