@@ -5,6 +5,7 @@ const ID = '@huanlin/dsh-plugin-sleep'
 const HOST_EXTERNALS = [
   '@deepseek-ai/cordis',
   '@deepseek-ai/dsh-tools',
+  '@deepseek-ai/dsh-llm',
 ]
 
 const libConfig: UserConfig = {

@@ -9,8 +9,8 @@ Bundle-style DSH plugin exposing a single `sleep` tool that lets the model pause
 - **Bundle form**: `cordis.patch.yml` inserts one plugin row; `package.json` has `dsh.bundle.patch`. No source patches to DSH staging.
 - **Pre-built `lib/` strategy**: `lib/` is committed (not in `.gitignore`); no `prepare` script; `github:` install works out of the box (private `@deepseek-ai/dsh-tools` peer cannot be fetched in pnpm's temporary `prepare` directory).
 - **Host-only**: no `dshClient` block, no client bundle, no CSS pipeline. The host registers one tool and that's it.
-- **Peer deps**: `cordis` + `@deepseek-ai/dsh-tools` (provided by host). `schemastery` is a direct dependency (config validator).
-- **Ambient types**: `src/types.d.ts` declares `@deepseek-ai/dsh-tools` and `cordis` for standalone typecheck (these are private packages, not on npm).
+- **Peer deps**: `@deepseek-ai/cordis` + `@deepseek-ai/dsh-tools` + `@deepseek-ai/dsh-llm` (provided by host; declared `^0.1.2-alpha.1`). `schemastery` is a direct dependency (config validator).
+- **Ambient types**: `src/types.d.ts` declares `@deepseek-ai/dsh-tools`, `@deepseek-ai/dsh-llm`, and `@deepseek-ai/cordis` for standalone typecheck (the alpha peers are not on npm, so devDependencies deliberately omit them; local dev resolves their *runtime* for vitest via manual junctions into a DSH v0.1.2-alpha.1 checkout).
 - **ESM-only**: `"type": "module"`, relative imports use `.js` extensions (NodeNext).
 - **defineTool contract**: `execute` returns a canonical JSON value; `render` is a separate pure projection. `exec.signal` honored at every await point.
 

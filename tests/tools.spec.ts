@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-import type { Context } from 'cordis'
+import type { Context } from '@deepseek-ai/cordis'
 
 vi.mock('@deepseek-ai/dsh-tools', () => ({
   defineTool: vi.fn((opts: unknown) => opts),

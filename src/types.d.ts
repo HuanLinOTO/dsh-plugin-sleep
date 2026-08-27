@@ -1,16 +1,21 @@
 /**
  * types.d.ts — peer 依赖的最小环境声明。
  *
- * `@deepseek-ai/dsh-tools` 与 `cordis` 是运行时由宿主 dsh 提供的 peer 依赖
- * （私有包，不能 npm install）。本文件仅为 src/* 的独立 typecheck 提供
- * 最小声明：只声明用到的成员与形状，与官方类型不完全一致；官方权威定义见
- * DSH staging packages/core/tools/src/schema.ts 与 vendor/cordis。
+ * `@deepseek-ai/dsh-tools`、`@deepseek-ai/dsh-llm` 与 `@deepseek-ai/cordis`
+ * 是运行时由宿主 dsh 提供的 peer 依赖（alpha 版本未发 npm，不能 npm install）。
+ * 本文件仅为 src/* 的独立 typecheck 提供最小声明：只声明用到的成员与形状，
+ * 与官方类型不完全一致；官方权威定义见 DSH v0.1.2-alpha.1 checkout 的
+ * packages/core/tools/src/、packages/llm/llm/src/ 与 vendor/cordis。
  */
+
+declare module '@deepseek-ai/dsh-llm' {
+  export type ToolCallId = string
+
+  export type ContentBlock = { type: 'text'; text: string }
+}
 
 declare module '@deepseek-ai/dsh-tools' {
   export type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue }
-
-  export type ContentBlock = { type: 'text'; text: string }
 
   export interface ValueSchemaAnnotations {
     description?: string
@@ -117,7 +122,8 @@ declare module '@deepseek-ai/dsh-tools' {
 
   export interface ToolRunContext {
     readonly signal: AbortSignal
-    readonly callId: string
+    readonly callId: ToolCallId
+    readonly rootCallId?: ToolCallId
     readonly name: string
     readonly arguments: unknown
   }
@@ -137,7 +143,7 @@ declare module '@deepseek-ai/dsh-tools' {
   export function defineTool(options: DefineToolOptions): unknown
 }
 
-declare module 'cordis' {
+declare module '@deepseek-ai/cordis' {
   export interface Context {
     tools: {
       register(definition: unknown): () => void

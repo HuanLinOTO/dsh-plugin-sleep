@@ -16,7 +16,7 @@
  */
 
 import z from 'schemastery'
-import type { Context } from 'cordis'
+import type { Context } from '@deepseek-ai/cordis'
 import { registerTools, type ResolvedConfig } from './tools.js'
 
 export const name = 'dsh-sleep'
