@@ -1,6 +1,6 @@
-[![dshfind](https://dshfind.com/api/badge/huanlinoto/dsh-plugin-sleep?lang=zh)](https://dshfind.com/zh/plugins/huanlinoto/dsh-plugin-sleep?ref=badge)
-
-> 📌 本插件已收录于 [dshfind](https://dshfind.com/zh) 插件超市，点击上方徽章直达主页。
+<p align="center">
+  <a href="https://dshfind.com/zh/plugins/huanlinoto/dsh-plugin-sleep"><img src="https://dshfind.com/api/card/huanlinoto/dsh-plugin-sleep?lang=zh" alt="dsh-plugin-sleep card"></a>
+</p>
 
 # dsh-sleep
 
