@@ -1,5 +1,5 @@
 import z from "schemastery";
-import { Context } from "cordis";
+import { Context } from "@deepseek-ai/cordis";
 //#region src/tools.d.ts
 interface ResolvedConfig {
   maxDurationMs: number;

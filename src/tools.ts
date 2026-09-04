@@ -9,9 +9,10 @@
  *   C10 — no UI-specific formats in the canonical value.
  */
 
-import type { Context } from 'cordis'
+import type { Context } from '@deepseek-ai/cordis'
 import { defineTool } from '@deepseek-ai/dsh-tools'
-import type { ContentBlock, ToolRunContext } from '@deepseek-ai/dsh-tools'
+import type { ToolRunContext } from '@deepseek-ai/dsh-tools'
+import type { ContentBlock } from '@deepseek-ai/dsh-llm'
 
 export interface ResolvedConfig {
   maxDurationMs: number
