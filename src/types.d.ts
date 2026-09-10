@@ -4,8 +4,13 @@
  * `@deepseek-ai/dsh-tools`、`@deepseek-ai/dsh-llm` 与 `@deepseek-ai/cordis`
  * 是运行时由宿主 dsh 提供的 peer 依赖（alpha 版本未发 npm，不能 npm install）。
  * 本文件仅为 src/* 的独立 typecheck 提供最小声明：只声明用到的成员与形状，
- * 与官方类型不完全一致；官方权威定义见 DSH v0.1.2-alpha.1 checkout 的
+ * 与官方类型不完全一致；官方权威定义见 DSH v0.1.5-rc.1 checkout 的
  * packages/core/tools/src/、packages/llm/llm/src/ 与 vendor/cordis。
+ *
+ * 0.1.5-rc.1 校对结论：`defineTool`/`DefineToolOptions`/`ToolRunContext`
+ * 与 llm 的 `ContentBlock`（`text` 变体）/`ToolSchema` 对本插件用到的成员
+ * 无签名漂移（llm 新增 `file` 变体、tools 新增可选 presenter/finalizer
+ * 成员均为 additive，本影子类型只声明用到的子集，无需改签名）。
  */
 
 declare module '@deepseek-ai/dsh-llm' {

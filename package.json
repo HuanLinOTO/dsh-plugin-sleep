@@ -1,6 +1,6 @@
 {
   "name": "@huanlin/dsh-plugin-sleep",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "publishConfig": {
     "access": "public"
   },
@@ -37,8 +37,8 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.1",
-    "@deepseek-ai/dsh-tools": "^0.1.2-rc.1",
-    "@deepseek-ai/dsh-llm": "^0.1.2-rc.1"
+    "@deepseek-ai/dsh-tools": "^0.1.5-rc.1",
+    "@deepseek-ai/dsh-llm": "^0.1.5-rc.1"
   },
   "peerDependenciesMeta": {
     "@deepseek-ai/cordis": { "optional": true },
@@ -46,6 +46,8 @@
     "@deepseek-ai/dsh-llm": { "optional": true }
   },
   "devDependencies": {
+    "@deepseek-ai/cordis": "link:D:/Projects/deepseek-harness/dsh/vendor/cordis",
+    "@deepseek-ai/dsh-tools": "link:D:/Projects/deepseek-harness/dsh/packages/core/tools",
     "@types/node": "^22.20.0",
     "tsdown": "^0.22.2",
     "typescript": "^5.9.0",
