@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Sleep",
+    "description": "Exposes a single sleep tool that lets the model pause for a configurable number of milliseconds before returning — handy for waiting out time-based conditions (service restarts, debounce windows, retry backoff) when no event-driven tool fits. Over-long durations are clamped to maxDurationMs; mid-sleep cancellation resolves with cancelled: true instead of throwing."
+  }
+}

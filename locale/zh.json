@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Sleep 工具",
+    "description": "向模型暴露一个 sleep 工具：按指定毫秒数暂停后再返回，适合等待服务重启、debounce 窗口、retry backoff 等时间相关条件。超过上限的时长会被钳制；中途取消以 cancelled: true 正常返回而不抛错。"
+  }
+}
