@@ -7,10 +7,14 @@
  * 与官方类型不完全一致；官方权威定义见 DSH v0.1.5-rc.1 checkout 的
  * packages/core/tools/src/、packages/llm/llm/src/ 与 vendor/cordis。
  *
- * 0.1.5-rc.1 校对结论：`defineTool`/`DefineToolOptions`/`ToolRunContext`
- * 与 llm 的 `ContentBlock`（`text` 变体）/`ToolSchema` 对本插件用到的成员
- * 无签名漂移（llm 新增 `file` 变体、tools 新增可选 presenter/finalizer
- * 成员均为 additive，本影子类型只声明用到的子集，无需改签名）。
+ * 0.1.7-rc.1 校对结论：`defineTool`/`DefineToolOptions`/`ToolRunContext`
+ * 与 llm 的 `ContentBlock`（`text` 变体）/`TextBlock` 对本插件用到的成员
+ * 无签名漂移（llm 新增 `developer` 角色、`file` 变体，tools 新增可选
+ * presenter/finalizer 成员均为 additive，本影子类型只声明用到的子集，
+ * 无需改签名）。注意：rc.1 起 dsh-tools 依赖 `@deepseek-ai/schemastery`
+ * (~3.18.4)，本插件现统一走该 scoped 包，不再混用 npm 未 scoped 的
+ * `schemastery@3.18.0`——混用会合并全局 `Schemastery` 命名空间并额外注入
+ * `Volatile`，使 `Config: z<Config>` 的显式注解报 TS2322。
  */
 
 declare module '@deepseek-ai/dsh-llm' {
