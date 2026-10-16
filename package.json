@@ -1,6 +1,6 @@
 {
   "name": "@huanlin/dsh-plugin-sleep",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "publishConfig": {
     "access": "public"
   },
@@ -35,12 +35,12 @@
     "build": "tsc -p tsconfig.json && tsdown -c tsdown.config.ts"
   },
   "dependencies": {
-    "@deepseek-ai/schemastery": "^3.18.4"
+    "@deepseek-ai/schemastery": "~3.18.5-alpha.2"
   },
   "peerDependencies": {
-    "@deepseek-ai/cordis": "^4.0.1",
-    "@deepseek-ai/dsh-tools": "^0.2.0-rc.1",
-    "@deepseek-ai/dsh-llm": "^0.2.0-rc.1"
+    "@deepseek-ai/cordis": "~4.0.5-alpha.2",
+    "@deepseek-ai/dsh-tools": "^0.2.1-alpha.5",
+    "@deepseek-ai/dsh-llm": "^0.2.1-alpha.5"
   },
   "peerDependenciesMeta": {
     "@deepseek-ai/cordis": { "optional": true },

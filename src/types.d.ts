@@ -15,6 +15,14 @@
  * (~3.18.4)，本插件现统一走该 scoped 包，不再混用 npm 未 scoped 的
  * `schemastery@3.18.0`——混用会合并全局 `Schemastery` 命名空间并额外注入
  * `Volatile`，使 `Config: z<Config>` 的显式注解报 TS2322。
+ *
+ * 0.2.1-alpha.5 校对结论（对照 alpha.5 `packages/core/tools/src/{index,schema}.ts`
+ * 全文核对）：`defineTool` 的 ValueSchemaSpec DSL（per-property `required: true`、
+ * `output.schema` 为显式 `ObjectValueSchemaSpec`）原样保留；`ctx.tools.register`
+ * 仍返回 disposer 且仍为 effect 式注册；`schemas()` 新增可选 `scope` 参数、
+ * `ToolRunContext` 新增 `deferContext`/`concludeTurn`（继承 `ToolExecution` 的
+ * `token`/`agent`/`parent`），均为 additive。本插件只读 `exec.signal`，影子
+ * 类型子集无需改签名。schemastery 对齐宿主 vendored `~3.18.5-alpha.2`。
  */
 
 declare module '@deepseek-ai/dsh-llm' {
